@@ -24,8 +24,12 @@ const Hero: React.FunctionComponent = () => {
           <Button roundedFull className="text-white bg-[#3734A9]">
             Our Proccess
           </Button>
-          <span className="flex flex-row items-center gap-3">
-            <img src={greenPlay} alt="Tune in" />
+          <span className="flex flex-row items-center gap-3 group cursor-pointer">
+            <img
+              src={greenPlay}
+              alt="Tune in"
+              className="group-hover:animate-spin"
+            />
             <span className="text-[#3734A9]">See How It Works</span>
           </span>
         </div>
@@ -37,6 +41,7 @@ const Hero: React.FunctionComponent = () => {
         <Input
           type="email"
           theme="white"
+          value={email}
           border
           className="max-w-[300px]"
           placeholder="Email Address"
@@ -45,6 +50,7 @@ const Hero: React.FunctionComponent = () => {
           }}
         />
         <Input
+          value={password}
           type="password"
           placeholder="Password"
           className="max-w-[300px]"

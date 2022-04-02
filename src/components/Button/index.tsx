@@ -20,10 +20,15 @@ const Button: React.FunctionComponent<Props> = ({
   return (
     <button
       {...props}
-      className={classNames(className, "outline-none py-3 px-5", {
-        "bg-[#FF7F5C]": orangeBg,
-        "rounded-full": roundedFull,
-      })}
+      className={classNames(
+        className,
+        "outline-none py-3 px-5",
+        {
+          "bg-[#FF7F5C]": orangeBg,
+          "rounded-full": roundedFull,
+        },
+        "transition duration-150 hover:scale-105 hover:opacity-80"
+      )}
     >
       {children}
     </button>
